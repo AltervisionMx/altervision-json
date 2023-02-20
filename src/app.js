@@ -1,6 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
-const exphbs = require('express-handlebars')
+const expressHandle = require('express-handlebars')
 const passport = require('passport')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
@@ -13,7 +13,7 @@ const secret = '951asd357pom'
 // settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('.hbs', exphbs({
+app.engine('.hbs', expressHandle({
     defaultLayout: 'main',
     extname: '.hbs'
 }));
@@ -28,8 +28,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize(undefined));
+app.use(passport.session(undefined));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
