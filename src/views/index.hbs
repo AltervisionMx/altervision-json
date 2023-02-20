@@ -1,0 +1,36 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-header">
+            <h1>Push Notifications</h1>
+        </div>
+        <div class="card-body">
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="topic">Seleccione categoria</label> <br>
+                    <select name="topic" id="topic" required class="form-control">
+                        <option value="news">Noticia</option>
+                        <option value="video">Video</option>
+                        <option value="huasteca">Huasteca News</option>
+                        <option value="facebook">Facebook live</option>
+                        <option value="promotions">Promociones</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="title" id="title" required placeholder="Titulo" class="form-control"> 
+                </div>
+                <div class="form-group">
+                    <input type="text" name="message" id="message" placeholder="Mensaje" class="form-control"> 
+                </div>
+                <div class="form-group">
+                    <input type="text" name="idPost" id="idPost" placeholder="Id de la publicacion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="url" id="url" placeholder="Url de la publicacion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-primary btn-block">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
